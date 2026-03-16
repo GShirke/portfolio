@@ -21,10 +21,57 @@ const contactLinks = [
   },
 ];
 
+const SuccessModal = ({ onClose }) => (
+  <motion.div
+    initial={{ opacity: 0 }}
+    animate={{ opacity: 1 }}
+    exit={{ opacity: 0 }}
+    className='fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm px-4'
+    onClick={onClose}
+  >
+    <motion.div
+      initial={{ scale: 0.7, opacity: 0, y: 40 }}
+      animate={{ scale: 1, opacity: 1, y: 0 }}
+      exit={{ scale: 0.7, opacity: 0, y: 40 }}
+      transition={{ type: 'spring', stiffness: 260, damping: 20 }}
+      className='bg-[#0d1224] border border-indigo-500/30 rounded-2xl p-8 max-w-sm w-full text-center shadow-2xl shadow-indigo-500/20'
+      onClick={(e) => e.stopPropagation()}
+    >
+      <div className='text-6xl mb-4 flex justify-center gap-2'>
+        <motion.span
+          animate={{ rotate: [0, -20, 20, -10, 10, 0], scale: [1, 1.2, 1.2, 1.1, 1.1, 1] }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+        >🎉</motion.span>
+        <motion.span
+          animate={{ rotate: [0, 20, -20, 10, -10, 0], scale: [1, 1.3, 1.3, 1.1, 1.1, 1] }}
+          transition={{ duration: 0.8, delay: 0.35 }}
+        >✉️</motion.span>
+        <motion.span
+          animate={{ rotate: [0, -20, 20, -10, 10, 0], scale: [1, 1.2, 1.2, 1.1, 1.1, 1] }}
+          transition={{ duration: 0.8, delay: 0.5 }}
+        >🎊</motion.span>
+      </div>
+
+      <h2 className='text-2xl font-bold text-white mb-2'>Message Sent!</h2>
+      <p className='text-slate-400 text-sm leading-relaxed mb-6'>
+        Congratulations! Your message has been delivered successfully. I'll get back to you as soon as possible. 🚀
+      </p>
+
+      <button
+        onClick={onClose}
+        className='btn-gradient px-8 py-2.5 rounded-xl font-semibold text-white hover:opacity-90 transition-opacity shadow-lg shadow-indigo-500/25 text-sm'
+      >
+        Awesome! 🙌
+      </button>
+    </motion.div>
+  </motion.div>
+);
+
 const Contact = () => {
   const formRef = useRef();
   const [form, setForm] = useState({ name: '', email: '', message: '' });
   const [loading, setLoading] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -36,7 +83,7 @@ const Contact = () => {
     setLoading(true);
     emailjs
       .send(
-        'service_z6f1s4z',
+        'service_vmutz1j',
         'template_a863l76',
         {
           from_name: form.name,
@@ -46,12 +93,12 @@ const Contact = () => {
           message: form.message,
           client_email: form.email,
         },
-        'AUDXSOSh-zHBMsgP3'
+        'hOguolAynZZJxY8Zz'
       )
       .then(
         () => {
           setLoading(false);
-          alert('Thank you. I will get back to you as soon as possible.');
+          setShowModal(true);
           setForm({ name: '', email: '', message: '' });
         },
         (error) => {
@@ -63,6 +110,8 @@ const Contact = () => {
   };
 
   return (
+    <>
+    {showModal && <SuccessModal onClose={() => setShowModal(false)} />}
     <div name='contact' className='w-full py-24 bg-[#0d1224]'>
       <div className='max-w-[1000px] mx-auto px-8'>
 
@@ -179,6 +228,7 @@ const Contact = () => {
         </div>
       </div>
     </div>
+    </>
   );
 };
 
