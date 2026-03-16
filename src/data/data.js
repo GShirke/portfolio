@@ -1,4 +1,3 @@
-import {ytplay,gptai,fitness,netflix,imagefinder,modernwebsite} from '../assets/projects/index';
 import html from '../assets/html.png';
 import CSS from '../assets/css.png';
 import Javascript from '../assets/javascript.png';
@@ -156,149 +155,93 @@ export const socialMedia = [
 
 export const data = [
     {
-        id:1,
-        name: "Youtube Player",
+        id: 1,
+        name: "System Health & Business Analytics Dashboard",
         description:
-            "Web-based platform that allows users to search, play music and watch content from various providers across the globe ...",
+            "Built an enterprise-grade analytics dashboard to visualize real-time system health metrics, KPIs, and business intelligence data. Developed robust backend APIs using PHP & Laravel, featuring interactive charts, customizable widgets, and drill-down reporting for data-driven decision making.",
         tags: [
-            {
-                name: "react",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "contextApi",
-                color: "green-text-gradient",
-            },
-            {
-                name: "Material UI",
-                color: "pink-text-gradient",
-            },
+            { name: "React" },
+            { name: "TypeScript" },
+            { name: "PHP" },
+            { name: "Laravel" },
+            { name: "Material UI" },
         ],
-        image: ytplay,
-        source_code_link: "https://github.com/sktaukir04/Youtube-react-clone",
-        project_link: 'https://youtube-clone-st.netlify.app'
+        gradient: "from-blue-600 via-cyan-500 to-blue-400",
+        icon: "chart",
     },
     {
-        id:2,
-        name: "Fitness Club",
+        id: 2,
+        name: "Background Job Tracking Dashboard",
         description:
-            "Web application that enables users to search for different Exercises, view Exercises/workouts ranges for different parts, and watch the respective videos ...",
+            "Developed a real-time monitoring dashboard to track and manage background jobs, task queues, and scheduled processes. Built scalable backend APIs with PHP & Laravel to handle job lifecycle management, providing live status updates, failure alerts, and retry mechanisms.",
         tags: [
-            {
-                name: "react",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "API",
-                color: "green-text-gradient",
-            },
-            {
-                name: "Material UI",
-                color: "pink-text-gradient",
-            },
-            {
-                name: "CSS",
-                color: "green-text-gradient",
-            },
+            { name: "React" },
+            { name: "TypeScript" },
+            { name: "PHP" },
+            { name: "Laravel" },
+            { name: "Material UI" },
         ],
-        image: fitness,
-        source_code_link: "https://github.com/sktaukir04/Gym-Exercise",
-        project_link: 'https://gym-exercise-st.netlify.app/'
+        gradient: "from-purple-600 via-violet-500 to-indigo-500",
+        icon: "jobs",
     },
     {
-        id:3,
-        name: "Netflix Clone",
+        id: 3,
+        name: "Enterprise Policy Creation",
         description:
-            "A web platform that fetches data from OMBD API and allows users to surf trending series/Movies and play the repective trailers of the content ...",
+            "Engineered a comprehensive policy management system enabling organizations to create, manage, and enforce enterprise-wide policies. Features multi-step workflows, role-based access control, version history, and structured approval chains.",
         tags: [
-            {
-                name: "Reactjs",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "API",
-                color: "green-text-gradient",
-            },
-            {
-                name: "CSS",
-                color: "pink-text-gradient",
-            },
+            { name: "React" },
+            { name: "TypeScript" },
+            { name: "Redux" },
+            { name: "Material UI" },
+            { name: "REST API" },
         ],
-        image: netflix,
-        source_code_link: "https://github.com/sktaukir04/netflix-clone",
-        project_link: 'https://netflix-clone-5423c.web.app/'
+        gradient: "from-amber-500 via-orange-500 to-yellow-400",
+        icon: "policy",
     },
     {
-        id:4,
-        name: "Image Finder using API",
+        id: 4,
+        name: "e-Signature Configuration",
         description:
-            "A web platform that fetches result from pixabay API and display its content, users can search and limit the number of content being displayed ...",
+            "Developed a configurable e-signature workflow system allowing enterprises to set up digital signature flows, manage signer roles, and configure signing sequences. Seamlessly integrates with document management systems for end-to-end digital signing.",
         tags: [
-            {
-                name: "Reactjs",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "API",
-                color: "green-text-gradient",
-            },
-            {
-                name: "CSS",
-                color: "pink-text-gradient",
-            },
-            {
-                name: "MUI",
-                color: "green-text-gradient",
-            },
+            { name: "React" },
+            { name: "TypeScript" },
+            { name: "DocuSign API" },
+            { name: "Material UI" },
+            { name: "REST API" },
         ],
-        image: imagefinder,
-        source_code_link: "https://github.com/sktaukir04/imagefinder-webclone",
-        project_link: 'https://image-finder-f8a31.web.app/'
+        gradient: "from-emerald-500 via-teal-500 to-green-400",
+        icon: "sign",
     },
     {
-        id:5,
-        name: "Modern UI | UX Website",
+        id: 5,
+        name: "Aikido Security",
         description:
-            "A fully responsive modern website with modern User Interface and User Experience using React and ...",
+            "Worked on backend security by auditing and fixing raw SQL queries, converting them into Laravel Query Builder syntax to eliminate potential SQL injection vulnerabilities and security risks. Ensured data integrity and improved overall application security posture.",
         tags: [
-            {
-                name: "Reactjs",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "CSS",
-                color: "pink-text-gradient",
-            },
-            {
-                name: "React Icons",
-                color: "green-text-gradient",
-            },
+            { name: "PHP" },
+            { name: "Laravel" },
+            { name: "Query Builder" },
+            { name: "SQL" },
+            { name: "Security" },
         ],
-        image: modernwebsite,
-        source_code_link: "https://github.com/sktaukir04/modern-website",
-        project_link: 'https://modern-website-st.netlify.app/'
+        gradient: "from-red-600 via-rose-500 to-pink-500",
+        icon: "security",
     },
     {
-        id:6,
-        name: "GPT AI Summarizer",
+        id: 6,
+        name: "Web Accessibility",
         description:
-            "A fully responsive open-source article summarizer that transforms lengthy articles into clear and concise summaries ...",
+            "Led web accessibility improvements across enterprise applications to meet WCAG 2.1 AA compliance standards. Implemented semantic HTML, ARIA attributes, keyboard navigation, focus management, and screen reader support for fully inclusive user experiences.",
         tags: [
-            {
-                name: "Reactjs",
-                color: "blue-text-gradient",
-            },
-            {
-                name: "CSS",
-                color: "pink-text-gradient",
-            },
-            {
-                name: "Tailwind",
-                color: "green-text-gradient",
-            },
+            { name: "React" },
+            { name: "WCAG 2.1" },
+            { name: "ARIA" },
+            { name: "TypeScript" },
+            { name: "Axe" },
         ],
-        image: gptai,
-        source_code_link: "https://github.com/sktaukir04/gpt-ai",
-        project_link: 'https://gpt-ai-st.netlify.app/'
+        gradient: "from-violet-600 via-purple-500 to-fuchsia-400",
+        icon: "access",
     },
 ];
